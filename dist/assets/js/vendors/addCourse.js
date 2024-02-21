@@ -10,32 +10,29 @@ let collapseListNumber = 0;
 console.dir(inputLectureName);
 console.dir(addLectureModal);
 console.dir(addSectionModal);
-console.dir(getSection);
-console.dir(getLecture);
 // document.addEventListener("DOMContentLoaded", function () {
-addSectionButton.addEventListener("click", function (event){
-console.log("clicked");
-    event.preventDefault();
-    var sectionName = getSection.value;
-    if (sectionName.trim() !== "") {
-        var sectionItem = document.createElement("div");
-        sectionItem.classList.add("bg-light");
-        sectionItem.classList.add("rounded");
-        sectionItem.classList.add("p-2");
-        sectionItem.classList.add("mb-4");
-        sectionItem.innerHTML = `
-                <h4>${sectionName}</h4>
-                <div class="list-group list-group-flush border-top-0" id="courseListSecond${sectionName}">
-                </div>
-                <a href="#" class="btn btn-outline-primary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#addLectureModal">Add Lecture +</a>
-              `;
-        document.getElementsByClassName("card-body")[0].appendChild(sectionItem);
-        $("#addSectionModal").modal("hide");
-    }
-})
+// addSectionButton.addEventListener("click", function (event){
+// console.log("clicked");
+//     event.preventDefault();
+//     var sectionName = getSection.value;
+//     if (sectionName.trim() !== "") {
+//         var sectionItem = document.createElement("div");
+//         sectionItem.classList.add("bg-light");
+//         sectionItem.classList.add("rounded");
+//         sectionItem.classList.add("p-2");
+//         sectionItem.classList.add("mb-4");
+//         sectionItem.innerHTML = `
+//                 <h4>${sectionName}</h4>
+//                 <div class="list-group list-group-flush border-top-0" id="courseListSecond${sectionName}">
+//                 </div>
+//                 <a href="#" class="btn btn-outline-primary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#addLectureModal">Add Lecture +</a>
+//               `;
+//         document.getElementsByClassName("card-body")[0].appendChild(sectionItem);
+//         $("#addSectionModal").modal("hide");
+//     }
+// })
 
 addLectureButton.addEventListener("click", function (event) {
-    console.log("clicked");
   collapseListNumber++;
   event.preventDefault();
   var lectureName = inputLectureName.value;
