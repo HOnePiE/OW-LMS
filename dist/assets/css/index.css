@@ -45,4 +45,44 @@
 .always-bottom {
   position: absolute;
   bottom: 0;
+}
+
+.btn_showPass {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#eyeClose {
+  display: none;
+}
+
+.form-group {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.password_input {
+  position: relative;
+}
+
+.form-group > .btn_showPass {
+  position: absolute;
+  top: 29px;
+  right: 12px;
+  font-size: 1.6rem;
+  color: #0096FF;
+  text-align: right;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form-group.invalid .form-control_p {
+  border-color: #f33a58;
+}
+
+.form-group.invalid .form-message_p {
+  color: #f33a58;
 }/*# sourceMappingURL=index.css.map */
